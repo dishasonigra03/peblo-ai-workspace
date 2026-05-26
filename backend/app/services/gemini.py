@@ -56,9 +56,9 @@ You MUST respond strictly with a valid JSON object matching this structure:
 Do NOT wrap the response in markdown blocks like ```json. Return only the raw JSON string.
 """
         try:
-            # Use gemini-1.5-flash which is standard and fast, or fallback
+            # Use gemini-flash-latest which is the current standard model
             model = genai.GenerativeModel(
-                model_name="gemini-1.5-flash",
+                model_name="gemini-flash-latest",
                 generation_config={"response_mime_type": "application/json"}
             )
             
